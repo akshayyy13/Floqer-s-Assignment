@@ -1,19 +1,16 @@
-import React, { useContext, useState } from "react";
-import Search from "../components/Search";
-import Heading from "../components/Heading";
-import { AppContext } from "../context/AppContext";
+import React from 'react'
+import NavHead from '../components/NavHead'
+import MainTable from '../components/MainTable'
 
 const Home = () => {
-  const {city,setCity,setTab} = useContext(AppContext)
-
   return (
-    <div className=" flex  flex-col min-h-screen text-white bg-richblack-900 font-inter">
-    <div className=" w-11/12 mx-auto">
-      <Heading  />
-      <Search  />
+    <div className=' bg-richblack-900 min-h-screen animate'>
+        <NavHead/>
+        <div className='  flex flex-col'>
+        <MainTable/>
+        </div>
     </div>
-    </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
